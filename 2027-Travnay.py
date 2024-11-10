@@ -3,7 +3,7 @@ import streamlit as st
 
 # Function to fetch weather data
 def get_weather(destination):
-    api_key = "YOUR_OPENWEATHERMAP_API_KEY"
+    api_key = "dcba723ffe60fde2ee5adbca1cd8141f"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={destination}&appid={api_key}"
     response = requests.get(url)
     if response.status_code == 200:
@@ -14,7 +14,7 @@ def get_weather(destination):
 
 # Function to fetch events from Eventbrite (or any similar API)
 def get_events(destination):
-    api_key = "YOUR_EVENTBRITE_API_KEY"
+    api_key = "BY335MDIEDTACJGG23"
     headers = {"Authorization": f"Bearer {api_key}"}
     url = f"https://www.eventbriteapi.com/v3/events/search/?location.address={destination}"
     response = requests.get(url, headers=headers)
